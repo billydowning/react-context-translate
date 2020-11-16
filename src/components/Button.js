@@ -6,8 +6,8 @@ class Button extends React.Component {
   //this is how to hook up a context object to a class component
 
   render(){
-    console.log(this.context);
-    return <button className="ui button primary">Submit</button>
+    const text = this.context === 'english' ? 'Submit' : 'Vorlegen'
+    return <button className="ui button primary">{text}</button>
   }
 }
 

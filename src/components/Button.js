@@ -10,6 +10,8 @@ class Button extends React.Component {
   //Should use Consumer when pulling data from multiple context objects
   //Can use this.context when only pulling from one context object
 
+
+
   render(){
     //const text = this.context === 'english' ? 'Submit' : 'Vorlegen'
     return (
@@ -17,7 +19,7 @@ class Button extends React.Component {
         {(color) =>
           <button className={`ui button ${color}`}>
           <LanguageContext.Consumer>
-            {(value) => value === 'english' ? 'Submit' : 'Vorlegen'}
+            {({ language }) => language === 'english' ? 'Submit' : 'Vorlegen'}
           </LanguageContext.Consumer>
           </button>
         }
